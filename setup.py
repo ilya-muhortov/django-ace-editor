@@ -5,9 +5,9 @@ setup(
     name='ace_editor',
     version='1.0',
     packages=find_packages(),
+    include_package_data=True,
     package_data={
-        "ace_editor/static/ace/css": ["*.css", "*.png"],
-        "ace_editor/static/ace/src": ["*.js"],
+        "ace_editor/static": ["*.css", "*.png", "*.js"]
     },
     long_description=open(join(dirname(__file__), 'README.txt')).read(),
 )
