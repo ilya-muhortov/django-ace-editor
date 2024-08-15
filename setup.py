@@ -5,6 +5,7 @@ setup(
     name='ace_editor',
     version='1.0',
     packages=find_packages(),
+    package_dir={"": "ace_editor"},
     package_data={
         "static.ace.css": ["*.css", "*.png"],
         "static.ace.src": ["*.js"],
