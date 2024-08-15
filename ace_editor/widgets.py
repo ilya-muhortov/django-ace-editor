@@ -15,7 +15,7 @@ class AceEditorWidget(forms.Textarea):
 
     def __init__(
         self,
-        mode=None,
+        mode='text',
         hide_label=True,
         editor_options=None,
         read_only=False,
