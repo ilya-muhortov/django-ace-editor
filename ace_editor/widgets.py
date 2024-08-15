@@ -1,6 +1,7 @@
 
 import json
 from django import forms
+from django.utils.safestring import mark_safe
 
 
 class AceEditorWidget(forms.Textarea):
@@ -48,7 +49,7 @@ class AceEditorWidget(forms.Textarea):
         textarea = super().render(name, value, attrs, renderer)
         editor_options = dict(self.editor_default_options, **self.editor_options)
 
-        return (f'''
+        return mark_safe(f'''
             {textarea}
             <div id="{attrs['id']}_editor" class="ace-editor"></div>
             <script>

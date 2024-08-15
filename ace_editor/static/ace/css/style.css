@@ -1,5 +1,7 @@
 
-
+.ace-editor {
+  width: 100%;
+}
 .ace-editor ::-webkit-scrollbar {
   width: 11px;
   height: 11px;
