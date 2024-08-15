@@ -7,7 +7,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     package_data={
-        "static": ["*.css", "*.png", "*.js"]
+        "ace_editor": ["static/**/*"]
     },
     long_description=open(join(dirname(__file__), 'README.txt')).read(),
 )
