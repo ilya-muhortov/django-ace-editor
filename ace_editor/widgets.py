@@ -79,6 +79,7 @@ class AceEditorWidget(forms.Textarea):
             label[for="{attrs['id']}"] {{
                 margin-top: -7px;
                 margin-left: 50px;
+                width: auto;
                 display: {'none' if self.hide_label else 'block'};
             }}
             .field-{name} .help {{
