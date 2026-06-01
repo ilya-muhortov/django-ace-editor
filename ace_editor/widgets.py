@@ -92,12 +92,18 @@ class AceEditorWidget(forms.Textarea):
 class AceJSONWidget(AceEditorWidget):
 
     def __init__(self, *args, **kwargs):
+        self.ensure_ascii = kwargs.pop('ensure_ascii', False)
+        self.indent = kwargs.pop('indent', 4)
         super().__init__(*args, mode='json', **kwargs)
 
     def render(self, name, value, attrs=None, renderer=None):
         if value:
             try:
-                value = json.dumps(json.loads(value), indent=4, ensure_ascii=False)
+                value = json.dumps(
+                    json.loads(value),
+                    indent=self.indent,
+                    ensure_ascii=self.ensure_ascii
+                )
             except json.JSONDecodeError:
                 pass
 
